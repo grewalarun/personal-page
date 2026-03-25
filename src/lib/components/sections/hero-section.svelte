@@ -39,7 +39,7 @@
           class="text-lg md:text-xl max-w-2xl leading-relaxed py-4"
           in:fly={{ y: 20, duration: 800, delay: 400 }}
         >
-          I'm a Fullstack Software Engineer from Germany with a passion for design systems and frontend development.
+          I'm a Fullstack Software Engineer from India 🇮🇳 with a passion for design systems and frontend development.
         </p>
        <div in:fly={{ y: 20, duration: 800, delay: 500 }}>
           <a 
