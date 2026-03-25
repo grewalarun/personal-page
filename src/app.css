@@ -1,0 +1,108 @@
+@import "tailwindcss";
+
+@import "tailwindcss/utilities";
+
+@variant dark (&:where(.dark, .dark *));
+
+@theme {
+  /* Light theme colors */
+  --color-background: #F1F1ED;
+  --color-surface: #FFFFFF;
+  --color-primary: #F97316;
+  --color-primary-hover: #EA6C0A;
+  --color-text: #111111;
+  --color-text-muted: #6B7280;
+  --color-border: #E4E4E7;
+
+  /* Dark theme colors */
+  --color-background-dark: #0A0A0A;
+  --color-surface-dark: #141414;
+  --color-primary-dark: #F97316;
+  --color-text-dark: #F1F1ED;
+  --color-text-muted-dark: #9CA3AF;
+  --color-border-dark: #2A2A2A;
+
+  /* Typography */
+  --font-sans: "Inter", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+}
+
+/* ── Light Theme (default) ── */
+:root {
+  --bg: #F1F1ED;
+  --bg-surface: #FFFFFF;
+  --text: #111111;
+  --text-muted: #6B7280;
+  --text-subtle: #9CA3AF;
+  --border: #E4E4E7;
+  --primary: #F97316;
+  --primary-hover: #EA6C0A;
+  --accent: #a3e635;
+}
+
+/* ── Dark Theme ── */
+:root.dark {
+  --bg: #0A0A0A;
+  --bg-surface: #141414;
+  --text: #F1F1ED;
+  --text-muted: #9CA3AF;
+  --text-subtle: #6B7280;
+  --border: #2A2A2A;
+  --primary: #F97316;
+  --primary-hover: #FB923C;
+  --accent: #a3e635;
+}
+
+/* ── Respect OS preference if no class set ── */
+/* @media (prefers-color-scheme: dark) {
+  :root:not(.light) {
+    --bg: #0A0A0A;
+    --bg-surface: #141414;
+    --text: #F1F1ED;
+    --text-muted: #9CA3AF;
+    --text-subtle: #6B7280;
+    --border: #2A2A2A;
+    --primary: #F97316;
+    --primary-hover: #FB923C;
+    --accent: #a3e635;
+  }
+} */
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    color-scheme: light dark;
+  }
+
+  body {
+    @apply font-sans antialiased;
+    background-color: var(--bg);
+    color: var(--text);
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  input, textarea {
+    @apply bg-transparent outline-none focus:ring-0;
+    color: var(--text);
+  }
+  .button {
+    color: var(--accent);
+  }
+  /* scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--bg);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--border);
+    border-radius: 999px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--text-muted);
+  }
+}   
