@@ -36,7 +36,7 @@
   </div>
 
   <!-- Nav links -->
-  <ul role="list">
+  <ul role="list" class="text-pink-600">
     <li><a href="/#skills">Skills</a></li>
     <li><a href="/#work">My Work</a></li>
     <li><a href="/#experience">Experience</a></li>
@@ -71,10 +71,10 @@
     transition: background-color 0.3s ease, box-shadow 0.3s ease, backdrop-filter 0.3s ease;
 
     &.scrolled {
-      background-color: var(--color-bg-dark);
+      background-color: rgba(255,255,255,0.9);
       box-shadow: 0 1px 0 rgba(255, 255, 255, 0.06);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
+      backdrop-filter: blur(7px);
+      -webkit-backdrop-filter: blur(7px);
     }
   }
 
