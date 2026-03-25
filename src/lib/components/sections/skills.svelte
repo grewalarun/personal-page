@@ -78,6 +78,7 @@
             <img
               src={skill.logo}
               alt={skill.name}
+              loading="lazy"
               class="w-full h-full object-contain"
               style="filter: drop-shadow(0 2px 6px {skill.color}40);"
             />
